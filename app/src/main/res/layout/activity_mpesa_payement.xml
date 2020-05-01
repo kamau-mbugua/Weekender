@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.mpesaPayement"
+
+        android:padding="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="50dp"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    >
+
+
+
+                    <TextView
+                        android:id="@+id/bb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone Number: "
+                        android:textSize="20dp"
+                        android:textColor="#FFFFFF"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/bb"
+                        android:hint="+254712345678"
+                        android:textColorHint="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textColor="#5ab8ea"/>
+
+                    <EditText
+                        android:id="@+id/quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/bb"
+                        android:layout_toRightOf="@id/amt"
+                        android:hint="Qty"
+                        android:textColorHint="#FFFFFF"
+                        android:padding="10dp"
+                        android:textSize="25dp"
+                        android:textColor="#5ab8ea"/>
+
+                    <TextView
+                        android:id="@+id/amt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price"
+                        android:layout_below="@+id/bb"
+                        android:textSize="25dp"
+                        android:padding="10dp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bb"
+                        android:layout_toRightOf="@+id/quantity"
+                        android:text="Total"
+                        android:textSize="25dp"
+                        android:padding="10dp"
+                        android:textColor="#FFFFFF"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/amt"
+                        android:layout_marginTop="30dp"
+                        android:textAlignment="center"
+                        android:text="Please make payment of the above mentioned amount and only then request for verification of payment for hassle free confirmations."
+                        android:textSize="20dp"
+                        android:textColor="#FFFFFF"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/verf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:text="Request verification of payment"
+            android:background="#6384f1"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
