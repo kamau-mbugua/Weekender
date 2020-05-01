@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "368495618758",
+    "firebase_url": "https://weekender-f3684.firebaseio.com",
+    "project_id": "weekender-f3684",
+    "storage_bucket": "weekender-f3684.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368495618758:android:790e7e78f81e18454f45c7",
+        "android_client_info": {
+          "package_name": "kamau_technerd.com.weekenders"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368495618758-4dpoiu882vel3uv5s0riro0sp72d1tvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBKf0Wae_ZPBuoq8tsoHvUjMp4hsMolBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368495618758-4dpoiu882vel3uv5s0riro0sp72d1tvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
