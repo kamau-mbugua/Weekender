@@ -87,7 +87,7 @@
         android:textColor="@color/black"
         android:text="Sign Up" />
     <TextView
-        android:id="@+id/tvRegister"
+        android:id="@+id/tvLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
