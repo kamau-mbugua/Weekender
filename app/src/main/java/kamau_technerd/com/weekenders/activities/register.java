@@ -87,7 +87,7 @@ public class register extends AppCompatActivity {
 
         else if (etPassword  != etRpassword){
             Toast.makeText(this, "Password Mismatch", Toast.LENGTH_SHORT).show();
-            etPassword.setError("Password Don't Match");
+            /*etPassword.setError("Password Don't Match");*/
         }
         else {
             final String fName = etfirstName.getText().toString().trim();
