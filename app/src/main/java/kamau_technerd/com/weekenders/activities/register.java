@@ -85,10 +85,10 @@ public class register extends AppCompatActivity {
             Toast.makeText(this, "Enter Confirm Your Password", Toast.LENGTH_SHORT).show();
         }
 
-        else if (etPassword  != etRpassword){
+        /*else if (etPassword  != etRpassword){
             Toast.makeText(this, "Password Mismatch", Toast.LENGTH_SHORT).show();
-            /*etPassword.setError("Password Don't Match");*/
-        }
+            *//*etPassword.setError("Password Don't Match");*//*
+        }*/
         else {
             final String fName = etfirstName.getText().toString().trim();
             final String lName = etlastName.getText().toString().trim();
@@ -104,8 +104,8 @@ public class register extends AppCompatActivity {
                         if (email.matches(emailParten)){
                             etEmail.setError("Invalid Email!");
                         }
-                        else if (password.length()<6){
-                            etPassword.setError("weak password");
+                        else if (password.length()<6 && RePassword != password){
+                            etPassword.setError("weak password or Password do not Match");
                         }
                         else {
                             Toast.makeText(register.this, "Registering Error, Try Again!!", Toast.LENGTH_SHORT).show();

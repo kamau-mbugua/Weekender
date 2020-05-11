@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
     tools:context=".activities.MainActivity">
 
     <RelativeLayout
@@ -52,6 +53,7 @@
         android:layout_height="match_parent"
         app:menu="@menu/navigation_menu"
         android:layout_gravity="start"
+        android:id="@+id/navigationview"
         app:headerLayout="@layout/navigation_header">
     </com.google.android.material.navigation.NavigationView>
 
