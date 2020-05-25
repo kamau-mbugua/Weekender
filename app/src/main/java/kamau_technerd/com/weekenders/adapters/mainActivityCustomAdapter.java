@@ -20,6 +20,8 @@ import java.util.List;
 
 import kamau_technerd.com.weekenders.R;
 import kamau_technerd.com.weekenders.activities.MainActivity;
+import kamau_technerd.com.weekenders.activities.specificEvent;
+import kamau_technerd.com.weekenders.activities.whole;
 
 public class mainActivityCustomAdapter extends ArrayAdapter<mainactivityListRow> {
     private Context context;
@@ -62,144 +64,144 @@ public class mainActivityCustomAdapter extends ArrayAdapter<mainactivityListRow>
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View listItem = convertView;
-        if (listItem == null) {
-            LayoutInflater.from(context).inflate(R.layout.homelistview, parent, false);
+        if (listItem == null)
+            listItem = LayoutInflater.from(context).inflate(R.layout.homelistview, parent, false);
 
-            mainactivityListRow currentList = List.get(position);
-            final  String[]  imageid = currentList.getImageid();
-            ImageView imageView1 = listItem.findViewById(R.id.image1);
-            Picasso.with(context).load(imageid[0]).fit().into(imageView1);
+        mainactivityListRow currentlist = List.get(position);
+        final String[] imageid = currentlist.getImageid();
+        ImageView imageView1 = listItem.findViewById(R.id.image1);
+        Picasso.with(context).load(imageid[0]).fit().into(imageView1);
 
-            ImageView imageView2 = listItem.findViewById(R.id.image2);
-            Picasso.with(context).load(imageid[0]).fit().into(imageView2);
+        ImageView imageView2 = listItem.findViewById(R.id.image2);
+        Picasso.with(context).load(imageid[1]).fit().into(imageView2);
 
-            ImageView imageView3 = listItem.findViewById(R.id.image3);
-            Picasso.with(context).load(imageid[0]).fit().into(imageView3);
+        ImageView imageView3 = listItem.findViewById(R.id.image3);
+        Picasso.with(context).load(imageid[2]).fit().into(imageView3);
 
-            ImageView imageView4 = listItem.findViewById(R.id.image4);
-            Picasso.with(context).load(imageid[0]).fit().into(imageView4);
+        ImageView imageView4 = listItem.findViewById(R.id.image4);
+        Picasso.with(context).load(imageid[3]).fit().into(imageView4);
 
-            ImageView imageView5 = listItem.findViewById(R.id.image5);
-            Picasso.with(context).load(imageid[0]).fit().into(imageView5);
+        ImageView imageView5 = listItem.findViewById(R.id.image5);
+        Picasso.with(context).load(imageid[4]).fit().into(imageView5);
 
-            ImageView imageView6 = listItem.findViewById(R.id.image6);
-            Picasso.with(context).load(imageid[0]).fit().into(imageView6);
+        ImageView imageView6 = listItem.findViewById(R.id.image6);
+        Picasso.with(context).load(imageid[5]).fit().into(imageView6);
 
-            /*ImageView imageView1 = listItem.findViewById(R.id.image1);
-            Picasso.with(context).load(imageid[0]).fit().into(imageView1);*/
+        Button title = listItem.findViewById(R.id.category);
+        title.setText(currentlist.getTitle());
 
-            Button title = listItem.findViewById(R.id.category);
-            title.setText(currentList.getTitle());
+        title.setTag(new Integer(position));
+        title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,whole.class);
+                String str=view.getTag().toString();
+                int row=Integer.valueOf(str);
+                i.putExtra("row", row);
+                context.startActivity(i);
+            }
+        });
 
-            title.setTag(new Integer(position));
-            title.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent( context, MainActivity.class);
-                    String string = view.getTag().toString();
-                    int rpw=  Integer.valueOf(string);
-                    intent.putExtra("row", rpw);
-                    context.startActivity(intent);
-                }
-            });
-
-            Button more = listItem.findViewById(R.id.more);
-            more.setTag(new Integer(position));
-            more.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent( context, MainActivity.class);
-                    String string = view.getTag().toString();
-                    int rpw=  Integer.valueOf(string);
-                    intent.putExtra("row", rpw);
-                    context.startActivity(intent);
-                }
-            });
-
-            imageView1.setTag(new Integer(position));
-            imageView1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent( context, MainActivity.class);
-                    String string = view.getTag().toString();
-                    int rpw=  Integer.valueOf(string);
-                    intent.putExtra("row", rpw);
-                    intent.putExtra("list", imageid[0]);
-                    context.startActivity(intent);
-                }
-            });
-
-            imageView2.setTag(new Integer(position));
-            imageView2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent( context, MainActivity.class);
-                    String string = view.getTag().toString();
-                    int rpw=  Integer.valueOf(string);
-                    intent.putExtra("row", rpw);
-                    intent.putExtra("list", imageid[1]);
-                    context.startActivity(intent);
-                }
-            });
-
-            imageView3.setTag(new Integer(position));
-            imageView3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent( context, MainActivity.class);
-                    String string = view.getTag().toString();
-                    int rpw=  Integer.valueOf(string);
-                    intent.putExtra("row", rpw);
-                    intent.putExtra("list", imageid[2]);
-                    context.startActivity(intent);
-                }
-            });
-
-            imageView4.setTag(new Integer(position));
-            imageView4.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent( context, MainActivity.class);
-                    String string = view.getTag().toString();
-                    int rpw=  Integer.valueOf(string);
-                    intent.putExtra("row", rpw);
-                    intent.putExtra("list", imageid[5]);
-                    context.startActivity(intent);
-                }
-            });
-
-            imageView5.setTag(new Integer(position));
-            imageView5.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent( context, MainActivity.class);
-                    String string = view.getTag().toString();
-                    int rpw=  Integer.valueOf(string);
-                    intent.putExtra("row", rpw);
-                    intent.putExtra("list", imageid[4]);
-                    context.startActivity(intent);
-                }
-            });
-
-            imageView6.setTag(new Integer(position));
-            imageView6.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent( context, MainActivity.class);
-                    String string = view.getTag().toString();
-                    int rpw=  Integer.valueOf(string);
-                    intent.putExtra("row", rpw);
-                    intent.putExtra("list", imageid[5]);
-                    context.startActivity(intent);
-                }
-            });
+        Button more = listItem.findViewById(R.id.more);
+        more.setTag(new Integer(position));
+        more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, whole.class);
+                String str=view.getTag().toString();
+                int row=Integer.valueOf(str);
+                i.putExtra("row", row);
+                context.startActivity(i);
+            }
+        });
 
 
+        imageView1.setTag(new Integer(position));
+        imageView1.setOnClickListener(new View.OnClickListener() {
 
-        }
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context, specificEvent.class);
+                String str=view.getTag().toString();
+                int row=Integer.valueOf(str);
+                i.putExtra("row", row);
+                i.putExtra("list",imageid[0]);
+                context.startActivity(i);
+            }
+        });
+
+        imageView2.setTag(new Integer(position));
+        imageView2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,specificEvent.class);
+                String str=view.getTag().toString();
+                int row=Integer.valueOf(str);
+                i.putExtra("row", row);
+                i.putExtra("list",imageid[1]);
+                context.startActivity(i);
+
+            }
+        });
+
+        imageView3.setTag(new Integer(position));
+        imageView3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,specificEvent.class);
+                String str=view.getTag().toString();
+                int row=Integer.valueOf(str);
+                i.putExtra("row", row);
+                i.putExtra("list",imageid[2]);
+                context.startActivity(i);
+
+            }
+        });
+
+        imageView4.setTag(new Integer(position));
+        imageView4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,specificEvent.class);
+                String str=view.getTag().toString();
+                int row=Integer.valueOf(str);
+                i.putExtra("row", row);
+                i.putExtra("list",imageid[3]);
+                context.startActivity(i);
+            }
+        });
+
+        imageView5.setTag(new Integer(position));
+        imageView5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,specificEvent.class);
+                String str=view.getTag().toString();
+                int row=Integer.valueOf(str);
+                i.putExtra("row", row);
+                i.putExtra("list",imageid[4]);
+                context.startActivity(i);
+            }
+        });
+
+        imageView6.setTag(new Integer(position));
+        imageView6.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(context,specificEvent.class);
+                String str=view.getTag().toString();
+                int row=Integer.valueOf(str);
+                i.putExtra("row", row);
+                i.putExtra("list",imageid[5]);
+                context.startActivity(i);
+            }
+        });
 
 
-
-        return listItem;
-    }
+        return listItem;}
 }

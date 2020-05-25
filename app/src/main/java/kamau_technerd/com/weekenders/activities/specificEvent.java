@@ -43,12 +43,12 @@ public class specificEvent extends AppCompatActivity {
         pos = intent.getIntExtra("pos",-1);
         imageurl = intent.getStringExtra("list");
         imageView1 =  findViewById(R.id.simg);
-        title = findViewById(R.id.specifics);
+        title = findViewById(R.id.etspecifics);
         details = findViewById(R.id.tvdescription);
         price = findViewById(R.id.tvamount);
         time = findViewById(R.id.etTime);
         venue = findViewById(R.id.tvplace);
-        date = findViewById(R.id.date);
+        date = findViewById(R.id.tvdate);
         bookmark = findViewById(R.id.ivbookmark);
         book = findViewById(R.id.btnbook);
         fromwhole = intent.getIntExtra("whole",-1);
