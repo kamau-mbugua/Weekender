@@ -7,7 +7,7 @@
     tools:context=".activities.specificEvent">
 
     <TextView
-        android:id="@+id/specifics"
+        android:id="@+id/etspecifics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -18,7 +18,7 @@
         android:textSize="24dp" />
 
     <Button
-        android:id="@+id/book"
+        android:id="@+id/btnbook"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
@@ -31,8 +31,8 @@
         android:id="@+id/scrl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/book"
-        android:layout_below="@+id/specifics"
+        android:layout_above="@+id/btnbook"
+        android:layout_below="@+id/etspecifics"
         android:fillViewport="true">
 
         <LinearLayout
@@ -55,7 +55,7 @@
                     />
 
                 <ImageButton
-                    android:id="@+id/bookmark"
+                    android:id="@+id/ivbookmark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -66,7 +66,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/time"
+                    android:id="@+id/tvtime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/simg"
@@ -76,40 +76,40 @@
                     android:paddingTop="5dp"/>
 
                 <TextView
-                    android:id="@+id/place"
+                    android:id="@+id/tvplace"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/amount"
+                    android:layout_below="@+id/tvamount"
                     android:textColor="#FFFFFF"
                     android:typeface="serif"
                     android:textSize="20dp"
                     android:paddingTop="5dp"/>
 
                 <TextView
-                    android:id="@+id/amount"
+                    android:id="@+id/tvamount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/date"
+                    android:layout_below="@+id/tvdate"
                     android:textColor="#FFFFFF"
                     android:typeface="serif"
                     android:textSize="20dp"
                     android:paddingTop="5dp"/>
 
                 <TextView
-                    android:id="@+id/description"
+                    android:id="@+id/tvdescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/place"
+                    android:layout_below="@id/tvplace"
                     android:textColor="#FFFFFF"
                     android:typeface="serif"
                     android:textSize="20dp"
                     android:paddingTop="5dp"/>
 
                 <TextView
-                    android:id="@+id/date"
+                    android:id="@+id/tvdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/time"
+                    android:layout_below="@+id/tvtime"
                     android:textColor="#FFFFFF"
                     android:typeface="serif"
                     android:textAlignment="textEnd"
