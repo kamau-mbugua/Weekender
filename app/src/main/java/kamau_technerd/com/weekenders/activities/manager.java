@@ -147,11 +147,21 @@ public class manager extends AppCompatActivity implements AdapterView.OnItemSele
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null &&
+        if (resultCode == RESULT_OK) {
+            if (requestCode == IMAGE_REQUEST) {
+
+                mImageUrl = data.getData();
+                Picasso.get().load(mImageUrl).into(ivXhoosenFile);
+                /*Picasso.get().load(mImageUrl).into(ivXhoosenFile);*/
+
+            }
+        }
+
+        /*if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null &&
 
         data.getData() != null){ mImageUrl= data.getData();
             Picasso.with(this).load(mImageUrl).into(ivXhoosenFile);
-        }
+        }*/
     }
 
     private  String getFileExtension(Uri uri){
