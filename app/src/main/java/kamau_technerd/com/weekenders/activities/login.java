@@ -156,7 +156,7 @@ public class login extends AppCompatActivity {
 
                   }
                   else if (task.isSuccessful()){
-                      if (mAuth.getCurrentUser().getUid().equals("bt9VLGesaKargLXwnK5Xh5v1Z143"))//Admin ID
+                      if (mAuth.getCurrentUser().getUid().equals("5k5gbl2sdsNT1CcmpPgEHNeO61F2"))//Admin ID
                       {
                           Intent intent = new Intent(login.this, manager.class);
                           startActivity(intent);
