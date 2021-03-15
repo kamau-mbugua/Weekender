@@ -56,6 +56,7 @@ public class manager extends AppCompatActivity implements AdapterView.OnItemSele
     FirebaseDatabase mfirebase;
     FirebaseStorage mFirebaseStorage;
     private static final int PICK_IMAGE_REQUEST = 1;
+    public static final int IMAGE_REQUEST = 1;
     String[] events = {"plays, clubs, cafes, parties"};
 
 
@@ -131,10 +132,15 @@ public class manager extends AppCompatActivity implements AdapterView.OnItemSele
         });
     }
     private  void chooseFile(){
-        Intent intent = new Intent();
+       /* Intent intent = new Intent();
         intent.setType("images/");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent, PICK_IMAGE_REQUEST);
+        startActivityForResult(intent, PICK_IMAGE_REQUEST);*/
+
+        Intent chooseIntent = new Intent();
+        chooseIntent.setType("image/*");
+        chooseIntent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(chooseIntent, IMAGE_REQUEST);
 
     }
 
