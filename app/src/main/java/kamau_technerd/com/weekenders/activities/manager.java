@@ -156,8 +156,13 @@ public class manager extends AppCompatActivity implements AdapterView.OnItemSele
 
     private  String getFileExtension(Uri uri){
         ContentResolver contentResolver = getContentResolver();
+        MimeTypeMap mime = MimeTypeMap.getSingleton();
+        String extension = mime.getExtensionFromMimeType(contentResolver.getType(uri));
+        return extension;
+
+        /*ContentResolver contentResolver = getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
-        return  mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));
+        return  mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(uri));*/
     }
 
     private  void uploadEvaent(){
